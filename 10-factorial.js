@@ -1,11 +1,8 @@
-let val = parseInt(process.argv[2]);
+const val = parseInt(process.argv[2]);
 
-function facto(a){
-    let finalVal = 1;
-    for (let i=a; i>0; i--){
-        finalVal*=i;
-    }
-    return finalVal;
+function facto(n) {
+  if (Number.isNaN(n) || n === 0) return 1;
+  return n * factorial(n - 1);
 }
 
-console.log(facto(val));
+console.log(factorial(val));
