@@ -1,5 +1,5 @@
 let argvVariable = process.argv;
-if (argvVariable.length===2) {
+if (!argvVariable[2]) {
     console.log("No argument")
 }
 else {
